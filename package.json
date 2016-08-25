@@ -16,7 +16,8 @@
   "dependencies": {
     "react": "^15.2.1",
     "react-dom": "^15.2.1",
-    "redux": "^3.5.2"
+    "redux": "^3.5.2",
+    "redux-logger": "^2.6.1"
   },
   "devDependencies": {
     "babel-loader": "^6.2.4",
