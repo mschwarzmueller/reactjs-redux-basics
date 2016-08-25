@@ -2,31 +2,20 @@ import {render} from "react-dom";
 import React from "react";
 import {createStore} from "redux";
 
-const reducer = (state = {
-    result: 1,
-    lastValues: []
-}, action) => {
+const reducer = (state, action) => {
     switch (action.type) {
         case "ADD":
-            state = {
-                ...state,
-                result: state.result + action.payload,
-                lastValues: [...state.lastValues, action.payload]
-            };
+            state = state + action.payload;
             break;
         case "SUBTRACT":
-            state = {
-                ...state,
-                result: state.result - action.payload,
-                lastValues: [...state.lastValues, action.payload]
-            };
+            state = state - action.payload;
             break;
     }
     return state;
 };
 
 
-const store = createStore(reducer);
+const store = createStore(reducer, 1);
 
 store.subscribe(() => {
     console.log("Store updated!", store.getState());
