@@ -4,7 +4,8 @@ import {createStore} from "redux";
 
 const initialState = {
     result: 1,
-    lastValues: []
+    lastValues: [],
+    username: "Max"
 };
 
 const reducer = (state = initialState, action) => {
