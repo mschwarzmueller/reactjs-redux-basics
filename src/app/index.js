@@ -2,10 +2,12 @@ import {render} from "react-dom";
 import React from "react";
 import {createStore} from "redux";
 
-const reducer = (state = {
+const initialState = {
     result: 1,
     lastValues: []
-}, action) => {
+};
+
+const reducer = (state = initialState, action) => {
     switch (action.type) {
         case "ADD":
             state = {
